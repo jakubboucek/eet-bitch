@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+
+	"name": "EET Bitch",
+	"description": "EET Bitch - Bič na EET vygeneruje náhodné fiskální údaje do kontrolního formuláře",
+	"version": "0.1",
+	"permissions": [
+		"https://adisspr.mfcr.cz/adistc/adis/idpr_pub/eet/uct/*"
+	],
+	"author": "Jakub Bouček",
+	"homepage_url": "https://github.com/jakubboucek/eet-bitch",
+	"short_name": "EET Bitch",
+	"icons": {
+		"16": "eet_16.png",
+		"48": "eet_48.png",
+		"128": "eet_128.png"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"https://adisspr.mfcr.cz/adistc/adis/idpr_pub/eet/uct/*"			],
+			"css": [ "eet.css" ],
+			"js": [ "eet.js" ],
+			"run_at": "document_end"
+		}
+	],
+	"web_accessible_resources": ["eet.svg"]
+}
